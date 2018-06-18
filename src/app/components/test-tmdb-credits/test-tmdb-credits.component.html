@@ -1,0 +1,33 @@
+<!--
+<mat-list role="list" *ngFor="let cast of cast">
+  <mat-list-item role="listitem"> {{cast.name}} as {{cast.character}} </mat-list-item>
+</mat-list>
+
+<pre>{{ cast | json }}</pre>
+-->
+<div>
+  <ng-container>
+    <div fxflexfill fxLayoutAlign="space-around center" fxlayoutgap="10px grid">
+      <mat-card role="listitem" *ngFor="let cast_in of cast">
+
+
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{cast_in.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://image.tmdb.org/t/p/w500{{cast_in.profile_path}}" alt="Photo of a Shiba Inu">
+
+
+
+      </mat-card>
+    </div>
+  </ng-container>
+</div>
+<div>
+  <p></p>
+  <div fxLayout="row" fxLayoutAlign="left center">
+    <ng-container>
+      <button mat-raised-button (click)="goToMovies()">Back</button>
+    </ng-container>
+  </div>
+</div>

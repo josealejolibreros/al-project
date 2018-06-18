@@ -1,0 +1,35 @@
+<div class="app-list">
+  <!-- <pre>{{data.results|json}}</pre> -->
+  <table mat-table class="mat-elevation-z8">
+    <thead>
+      <tr>
+        <th>Movie</th>
+        <th>Genre</th>
+        <th>Release date</th>
+        <th>Stats</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of data.results" (click)="onClick(movie.id)">
+          <td class="movie">
+            <div>
+                <h2>{{movie.title}}</h2>
+                {{ (movie.overview.length > 100) ? (movie.overview | slice:0:100) + '....' : (movie.overview) }}
+            </div>
+          </td>
+          <td>
+            <app-genres
+              [genres]="genres"
+              [genreIds]="movie.genre_ids">
+            </app-genres>
+          </td>
+          <td>{{ movie.release_date }}</td>
+          <td>
+            <app-stats
+              [data]="{ popularity: movie.popularity, vote_average: movie.vote_average, vote_count: movie.vote_count }">
+            </app-stats>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

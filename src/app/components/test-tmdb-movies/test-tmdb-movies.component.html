@@ -1,0 +1,18 @@
+<ng-container>
+    <div fxLayout="column" fxLayoutAlign="space-around center" >
+  <mat-card role="listitem" *ngFor="let movie of movies" let i = index>
+
+
+      <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title> <a [routerLink]="['/credits',movie.id]">{{movie.title}}</a></mat-card-title>
+         
+      </mat-card-header>
+      <img mat-card-image src="https://image.tmdb.org/t/p/w500{{movie.backdrop_path}}" alt="Photo of a Shiba Inu">
+     
+        
+    
+  </mat-card>
+  </div>
+</ng-container>
+
