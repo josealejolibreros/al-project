@@ -3,13 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import {map} from 'rxjs/operators';
 import { ResponseDescriptor } from '../types/search.type';
 
-
 @Injectable({
   providedIn: 'root'
 })
-export class SearchService {
+export class SearchActorsService {
 
-  private url: string = "https://api.themoviedb.org/3/search/movie?api_key=977cda5d9bfac0a6b0252ef0272785b6&query=";
+  private url: string = "https://api.themoviedb.org/3/search/person?api_key=977cda5d9bfac0a6b0252ef0272785b6&query=";
 
   constructor(private http: HttpClient) {  }
 
@@ -18,11 +17,9 @@ export class SearchService {
       .get(this.url + term)
       .pipe(
         map((data)=>{
-          return ResponseDescriptor.import(data);
+          return ResponseDescriptor.importActors(data);
         })
       );
   }
 
 }
-
-

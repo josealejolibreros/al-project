@@ -1,0 +1,35 @@
+<div class="app-list-actors">
+    <!-- <pre>{{data.results|json}}</pre> -->
+    <table mat-table class="mat-elevation-z8">
+        <thead>
+            <tr>
+                <th>Photo</th>
+                <th>Name</th>
+                <th>Stats</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr *ngFor="let actor of data.actors_results" (click)="onClick(actor.id)">
+
+
+                <td>
+                    <div >
+                        <img class="card-photo-actors" mat-card-image src="https://image.tmdb.org/t/p/w500{{actor.profile_path}}" alt="Photo of {{actor.name}}">
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <h2>{{actor.name}}</h2>
+
+                    </div>
+                </td>
+
+                <td>
+                    <app-stats-actors [data]="{ popularity: actor.popularity}">
+                    </app-stats-actors>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

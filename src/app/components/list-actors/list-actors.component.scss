@@ -1,0 +1,27 @@
+.app-list-actors {
+    padding: 1em;
+    margin: 1em;
+    td, th {
+        border: 1px lightgray solid;
+        padding: 0.5em;
+    }
+    table {
+        width: 100%;
+    }
+    td.movie{
+        width: 35%;
+    }
+    tbody tr:hover {
+        background-color: rgba($color: #ffff00, $alpha: 0.1);
+        cursor: pointer;
+    }
+}
+
+.card-photo-actors {
+    max-width: 150px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }

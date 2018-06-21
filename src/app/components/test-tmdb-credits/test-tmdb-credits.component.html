@@ -8,14 +8,14 @@
 <div>
   <ng-container>
     <div fxflexfill fxLayoutAlign="space-around center" fxlayoutgap="10px grid">
-      <mat-card role="listitem" *ngFor="let cast_in of cast">
+      <mat-card role="listitem" *ngFor="let cast_in of cast" (click)="onClick(cast_in.id)">
 
 
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
           <mat-card-title>{{cast_in.name}}</mat-card-title>
         </mat-card-header>
-        <img mat-card-image src="https://image.tmdb.org/t/p/w500{{cast_in.profile_path}}" alt="Photo of a Shiba Inu">
+        <img mat-card-image src="https://image.tmdb.org/t/p/w500{{cast_in.profile_path}}" alt="Photo of {{cast_in.name}}">
 
 
 

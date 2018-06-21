@@ -1,9 +1,13 @@
 <!--<router-outlet></router-outlet>-->
 
-<div fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="10px">  <a mat-raised-button routerLink="/movies" routerLinkActive="active" color="primary">Movies</a>
+<div fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="10px">
+  <a mat-raised-button routerLink="/movies" routerLinkActive="active" color="primary">Top rated movies</a>
+
+  <a mat-raised-button routerLink="/search" routerLinkActive="active" color="primary">Search movies</a>
   
-    <a mat-raised-button routerLink="/search" routerLinkActive="active" color="primary">Search</a>
-  </div>
-  <div fxLayout="colum" fxLayoutAlign="start stretch" fxLayoutGap="10px">
-    <router-outlet></router-outlet>
-  </div>
+  <a mat-raised-button routerLink="/search-actors" routerLinkActive="active" color="primary">Search actors</a>
+
+</div>
+<div fxLayout="colum" fxLayoutAlign="start stretch" fxLayoutGap="10px">
+  <router-outlet></router-outlet>
+</div>

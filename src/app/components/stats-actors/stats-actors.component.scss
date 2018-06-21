@@ -1,0 +1,15 @@
+.app-stats {
+    background-color: azure;
+    .low {
+        color: lightgray;
+    }
+    .normal {
+        color: blue;
+    }
+    .high {
+        color: lightgreen;
+    }
+    .invisible {
+        display: none;
+    }
+}

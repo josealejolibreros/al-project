@@ -20,12 +20,16 @@ export class TestTmdbCreditsComponent implements OnInit {
 
   private routerSubscribe:any;
   public cast : any;
+  previousUrl: string;
   
 
 
 
   constructor(private tmdbCreditServiceService: TmdbCreditsServiceService,
-  private route : ActivatedRoute,private router: Router) { }
+  private route : ActivatedRoute,private router: Router) {
+
+   
+   }
 
   
 
@@ -46,6 +50,11 @@ export class TestTmdbCreditsComponent implements OnInit {
   
   goToMovies() {
     this.router.navigate(['/movies']);
+  }
+
+
+  onClick(actor) {
+    this.router.navigate(['/actor', actor]);
   }
 
 }
