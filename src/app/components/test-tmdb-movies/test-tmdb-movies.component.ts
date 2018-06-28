@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {TmdbMovieServiceService} from '../../services/tmdb-movie-service.service';
 import {Response} from '@angular/http';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-test-tmdb-movies',
   templateUrl: './test-tmdb-movies.component.html',
@@ -11,7 +12,8 @@ export class TestTmdbMoviesComponent implements OnInit {
 
   public movies;
   
-  constructor(private tmdbMovieServiceService: TmdbMovieServiceService) { }
+  
+  constructor(private tmdbMovieServiceService: TmdbMovieServiceService,private router: Router) { }
 
   ngOnInit() {
     this.tmdbMovieServiceService.getMovies().subscribe(
@@ -30,6 +32,10 @@ export class TestTmdbMoviesComponent implements OnInit {
 
     );
     
+  }
+  
+  onClick(movie) {
+    this.router.navigate(['/detail', movie]);
   }
 
 }

@@ -38,8 +38,8 @@ import { StatsActorsComponent } from './components/stats-actors/stats-actors.com
     ListComponent,
     StatsComponent,
     GenresComponent,
-    TestTmdbMoviesComponent,
-    TestTmdbCreditsComponent,
+    TestTmdbMoviesComponent,TestTmdbCreditsComponent,
+    
     PageListsActorsComponent,
     PageActorDetailComponent,
     ListActorsComponent,

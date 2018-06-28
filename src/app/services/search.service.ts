@@ -8,6 +8,7 @@ import { ResponseDescriptor } from '../types/search.type';
   providedIn: 'root'
 })
 export class SearchService {
+  
 
   private url: string = "https://api.themoviedb.org/3/search/movie?api_key=977cda5d9bfac0a6b0252ef0272785b6&query=";
 

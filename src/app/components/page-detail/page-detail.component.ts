@@ -16,6 +16,7 @@ export class PageDetailComponent implements OnInit {
   public strProductionCompanies: string = '';
   public strProductionCountries: string = '';
   public strSpokenLanguages: string = '';
+  public idMovie:number;
 
   constructor(
     private route: ActivatedRoute,
@@ -26,6 +27,7 @@ export class PageDetailComponent implements OnInit {
   ngOnInit() {
     this.routerSubscribe = this.route.params.subscribe(params => {
       let idMovie: number = +params['id'];
+      this.idMovie=idMovie;
       this.detailService.getDetail(idMovie).subscribe(
         (data) => {
           this.strProductionCompanies = data.production_companies.map((element)=>{return element.name}).join(', ');
@@ -36,6 +38,8 @@ export class PageDetailComponent implements OnInit {
         }
       );
     });
+
+
   }
 
   goToSearch() {

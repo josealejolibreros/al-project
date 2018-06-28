@@ -1,9 +1,10 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { TmdbCreditsServiceService } from "../../services/tmdb-credits-service.service";
 import { ActivatedRoute,Router } from '@angular/router';
 import {Response} from '@angular/http';
 import {HttpClientModule} from '@angular/common/http';
+
 
 
 
@@ -16,27 +17,32 @@ import {HttpClientModule} from '@angular/common/http';
 
 
 
+
 export class TestTmdbCreditsComponent implements OnInit {
+  @Input() public data:any;
 
   private routerSubscribe:any;
   public cast : any;
   previousUrl: string;
+  public idMovie:number;
   
 
 
 
   constructor(private tmdbCreditServiceService: TmdbCreditsServiceService,
   private route : ActivatedRoute,private router: Router) {
-
+    
    
    }
 
   
 
   ngOnInit() {
+    this.idMovie=this.data.idMovie;
+
     this.routerSubscribe = this.route.params.subscribe(params => {
-      let idMovie: number = +params['idMovie'];
-      this.tmdbCreditServiceService.getCredits(idMovie).subscribe(
+      //let idMovie: number = +params['idMovie'];
+      this.tmdbCreditServiceService.getCredits(this.idMovie).subscribe(
         (data:any) => {
           this.cast = data
         },
@@ -46,6 +52,10 @@ export class TestTmdbCreditsComponent implements OnInit {
       );
     });
   }
+
+  
+
+
 
   
   goToMovies() {
