@@ -15,6 +15,7 @@ export class SearchService {
   constructor(private http: HttpClient) {  }
 
   search(term: string) {
+    
     return this.http
       .get(this.url + term)
       .pipe(

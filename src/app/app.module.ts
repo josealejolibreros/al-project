@@ -2,14 +2,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule,ReactiveFormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 
 // Material & flex imports
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {MatButtonModule} from '@angular/material';
-import {MatCardModule} from '@angular/material';
+
+import {MatButtonModule,MatCardModule,MatAutocompleteModule,MatFormFieldModule,MatInputModule } from '@angular/material';
+
 
 // Our components imports
 import { AppRoutingModule } from './app-routing.module';
@@ -28,6 +29,7 @@ import {PageListsActorsComponent} from './components/page-lists-actors/page-list
 import { ListActorsComponent } from './components/list-actors/list-actors.component';
 import { SearchActorsComponent } from './components/search-actors/search-actors.component';
 import { StatsActorsComponent } from './components/stats-actors/stats-actors.component';
+
 
 @NgModule({
   declarations: [
@@ -54,7 +56,12 @@ import { StatsActorsComponent } from './components/stats-actors/stats-actors.com
     HttpClientModule,
     FlexLayoutModule,
     MatButtonModule,
-    MatCardModule,BrowserModule, HttpModule
+    MatCardModule,BrowserModule, 
+    HttpModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatInputModule 
   ],
   providers: [],
   bootstrap: [AppComponent],
