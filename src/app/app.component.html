@@ -1,5 +1,21 @@
 <!--<router-outlet></router-outlet>-->
 
+
+<nav class="mat-elevation-z6" fxLayout="row" >
+  <nav _ngcontent-c1 class="docs-navbar-header" >
+    <a mat-button routerLink="/movies" routerLinkActive="active" color="primary">Top movies</a><br>
+    <a mat-button routerLink="/search" routerLinkActive="active" color="primary">Search movies</a><br>
+    <a mat-button routerLink="/search-actors" routerLinkActive="active" color="primary">Search actors</a><br>
+  </nav>
+</nav>
+<!--app-navbar class = "mat-elevation-z6" _nghost-c1>
+  <a mat-raised-button routerLink="/movies" routerLinkActive="active" color="primary">Movies</a><br>
+</app-navbar-->
+
+
+<router-outlet></router-outlet>
+
+<!--
 <div fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="10px">
   <a mat-raised-button routerLink="/movies" routerLinkActive="active" color="primary">Top rated movies</a>
 
@@ -11,3 +27,4 @@
 <div fxLayout="colum" fxLayoutAlign="start stretch" fxLayoutGap="10px">
   <router-outlet></router-outlet>
 </div>
+-->

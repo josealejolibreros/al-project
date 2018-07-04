@@ -6,6 +6,7 @@ export class MovieDescriptor {
     public genres: GenreDescriptor[] = [];
     public title: string;
     public overview: string;
+    public backdrop_path : string;
     public release_date: string;
     public popularity: number;
     public vote_average: number;
@@ -24,6 +25,7 @@ export class MovieDescriptor {
         movie.popularity = rawData.hasOwnProperty('popularity') ? rawData.popularity : 0;
         movie.vote_average = rawData.hasOwnProperty('vote_average') ? rawData.vote_average : 0;
         movie.vote_count = rawData.hasOwnProperty('vote_count') ? rawData.vote_count : 0;
+        movie.backdrop_path = rawData.hasOwnProperty('backdrop_path') ? rawData.backdrop_path : 0;
 
         let genre: GenreDescriptor;
         if (rawData.hasOwnProperty("genres")) {

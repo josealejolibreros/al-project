@@ -5,8 +5,43 @@
 
 <pre>{{ cast | json }}</pre>
 -->
+<div class="cast-container" fxLayout="row wrap">
+  <div class="my-mat-card" style="padding: 10px" role="listitem" *ngFor="let cast_in of cast" (click)="onClick(cast_in.id)">
+    <mat-card class="mat-card">
+      <mat-card-title class="mat-card-title">
+        {{cast_in.name}}
+      </mat-card-title>
+      <mat-card-subtitle class="mat-card-subtitle">
+        as: {{cast_in.character}}
+      </mat-card-subtitle>
+      <div class="image_container" fxLayoutGap="center center">
+        <div *ngIf="cast_in.profile_path == null; then content else other_content">here is ignored</div>
+        <ng-template #content>
+         
+            <img mat-card-image src="../../../assets/IMAGES/person.jpg" title={{cast_in.name}} alt={{cast_in.name}} style="width: 235px; height: 235px">
+          
+        </ng-template>
+        <ng-template #other_content>
+          
+            <img mat-card-image src="https://image.tmdb.org/t/p/w500{{cast_in.profile_path}}" alt="Photo of {{cast_in.name}}" title={{cast_in.name}}>
+          
+        </ng-template>
+      </div>
+    </mat-card>
+  </div>
+</div>
+
+
+
+
+
+<!--
+ <a [routerLink] = "['/detail/actor', cast_in.id]" ></a>
+<a [routerLink] = "['/detail/actor', actor.id]"></a>
+
+
 <div>
-  <ng-container>
+  <ng-container class="ng-c">
     <div fxflexfill fxLayoutAlign="space-around center" fxlayoutgap="10px grid">
       <mat-card role="listitem" *ngFor="let cast_in of cast" (click)="onClick(cast_in.id)">
 
@@ -23,6 +58,8 @@
     </div>
   </ng-container>
 </div>
+-->
+
 <div>
   <p></p>
   <div fxLayout="row" fxLayoutAlign="left center">

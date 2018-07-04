@@ -1,19 +1,37 @@
 <div class="app-page-detail" >
-  <div fxLayout="row" fxLayoutAlign="space-around center">
+  <div fxLayout="column" fxLayoutAlign="space-around center">
+
+    <app-image-scroll [data]="movie.backdrop_path"></app-image-scroll>
+    <!--  
+    <div id="navbar" class="navbar">
+          <img  src="https://image.tmdb.org/t/p/w500{{movie.backdrop_path}}" alt="Photo of {{movie.name}}" title={{movie.name}}>
+        
+
+      </div>
+    -->
+
     <div class="container">
-      <div class="header" fxLayout="row" fxLayoutAlign="space-around center">
-        <div class="info">
-          <h2>{{ movie.title }}</h2>
-          <div>{{ strGenres }}</div>
+
+      
+      <div class="row" fxLayout="row" fxLayoutAlign="space-around center">
+        
+
+        <div  class="left" fxFlex="100">
+          <h1>{{ movie.title }}</h1>
+          <div class="genre">{{ strGenres }}</div>
           <div>{{ movie.release_date }}</div>
         </div>
+        
+
         <div class="stats">
           <app-stats
             [data]="{ popularity: movie.popularity, vote_average: movie.vote_average, vote_count: movie.vote_count }">
           </app-stats>
         </div>
+        
       </div>
-
+      
+      
       <div class="overview">
           {{ movie.overview }}
       </div>
@@ -31,10 +49,19 @@
         <div class="title">Spoken languages:</div>
         <div>{{ strSpokenLanguages }}</div>
       </div>
+
+      <div>
+        <app-test-tmdb-credits  [data]="{ idMovie: idMovie}">
+        </app-test-tmdb-credits>
+        </div>
     </div>
+
+
+
+    
+
   </div>
 
-  <app-test-tmdb-credits  [data]="{ idMovie: idMovie}"></app-test-tmdb-credits>
 
 
   <div fxLayout="row" fxLayoutAlign="center center">
@@ -44,3 +71,13 @@
   <!-- <pre>{{ movie | json }}</pre> -->
 
 </div>
+
+
+
+
+  <!--Scroll to top-->
+  <!--
+  <button [ngClass]="{'show-scroll': navIsFixed}" (click)="scrollToTop()" class="scroll-to-top">
+      Scroll To Top
+  </button>
+-->

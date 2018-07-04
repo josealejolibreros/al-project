@@ -29,6 +29,8 @@ import {PageListsActorsComponent} from './components/page-lists-actors/page-list
 import { ListActorsComponent } from './components/list-actors/list-actors.component';
 import { SearchActorsComponent } from './components/search-actors/search-actors.component';
 import { StatsActorsComponent } from './components/stats-actors/stats-actors.component';
+import { GoToUpComponent } from './components/go-to-up/go-to-up.component';
+import { ImageScrollComponent } from './components/image-scroll/image-scroll.component';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import { StatsActorsComponent } from './components/stats-actors/stats-actors.com
     PageActorDetailComponent,
     ListActorsComponent,
     SearchActorsComponent,
-    StatsActorsComponent
+    StatsActorsComponent,
+    GoToUpComponent,
+    ImageScrollComponent
   ],
   imports: [
     BrowserModule,

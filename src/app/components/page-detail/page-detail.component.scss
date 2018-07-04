@@ -4,16 +4,52 @@
         margin-top: 1em;
     }
     .overview {
-        border: 1px  lightgray solid;
-        margin-top: 1em;
-        overflow-y: auto;
-        overflow-x: hidden;
+        //border: 1px  lightgray solid;
+        margin-top: 3em;
+        //overflow-y: auto;
+        //overflow-x: auto;
         max-height: 6em;
     }
     .container {
-        max-width: 25em;
+        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+        max-width: 50em;
     }
     button {
         margin-top: 2em;
     }
+
+    h1{
+        font-weight: lighter;
+        font-size: 50px
+    }
+
+    .info {
+        
+        font-size: 24px;
+        font-style: normal;
+        font-variant: normal;
+        //font-weight: 500;
+        //line-height: 26.4px;
+    }
+
+    .stats {
+        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+        color: black;
+        background: #303030;
+        //background: #424242;
+    }
+
+    
+    
+    #navbar{
+        position: fixed;
+        transition: top 0.3s;
+        top: 0; /* Stay on top */
+        width: 100%; /* Full width */
+        height: 200px;
+
+    }
+
+    
 }
+
