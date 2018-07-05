@@ -1,71 +1,82 @@
-<div class="app-page-detail" >
+<div class="app-page-detail">
+
   <div fxLayout="column" fxLayoutAlign="space-around center">
+    <div class="image-movie">
+      <app-image-scroll [data]="movie.backdrop_path"></app-image-scroll>
+    </div>
 
-    <app-image-scroll [data]="movie.backdrop_path"></app-image-scroll>
-    <!--  
-    <div id="navbar" class="navbar">
-          <img  src="https://image.tmdb.org/t/p/w500{{movie.backdrop_path}}" alt="Photo of {{movie.name}}" title={{movie.name}}>
-        
 
-      </div>
-    -->
+    
+
+
 
     <div class="container">
 
-      
-      <div class="row" fxLayout="row" fxLayoutAlign="space-around center">
-        
 
-        <div  class="left" fxFlex="100">
+
+      <div class="row" fxLayout="row" fxLayoutAlign="space-around center">
+
+
+        <div class="left" fxFlex="100">
           <h1>{{ movie.title }}</h1>
-          <div class="genre">{{ strGenres }}</div>
-          <div>{{ movie.release_date }}</div>
+          <div class="basic">{{ strGenres }}</div>
+          <div class="basic">{{ movie.release_date }}</div>
         </div>
-        
+
 
         <div class="stats">
-          <app-stats
-            [data]="{ popularity: movie.popularity, vote_average: movie.vote_average, vote_count: movie.vote_count }">
+          <app-stats [data]="{ popularity: movie.popularity, vote_average: movie.vote_average, vote_count: movie.vote_count }">
           </app-stats>
         </div>
-        
+
       </div>
-      
-      
+
+
       <div class="overview">
-          {{ movie.overview }}
+        {{ movie.overview }}
       </div>
       <div>
         <div class="title">Production companies:</div>
-        <div>{{ strProductionCompanies }}</div>
+        <div class="basic">{{ strProductionCompanies }}</div>
       </div>
 
       <div>
         <div class="title">Production countries:</div>
-        <div>{{ strProductionCountries }}</div>
+        <div class="basic">{{ strProductionCountries }}</div>
       </div>
 
       <div>
         <div class="title">Spoken languages:</div>
-        <div>{{ strSpokenLanguages }}</div>
+        <div class="basic">{{ strSpokenLanguages }}</div>
       </div>
 
-      <div>
-        <app-test-tmdb-credits  [data]="{ idMovie: idMovie}">
-        </app-test-tmdb-credits>
+      <div fxLayout="row" fxLayoutAlign="center none" >
+          <div></div>
+        
+          <div class="app-background">
+              <app-test-tmdb-credits [data]="{ idMovie: idMovie}">
+              </app-test-tmdb-credits>
+            </div>
+        
+          <div></div>
+        
         </div>
+
+
+
+      
     </div>
 
 
 
-    
+
 
   </div>
 
 
 
   <div fxLayout="row" fxLayoutAlign="center center">
-    <button mat-raised-button (click) = "goToSearch()">Back</button>
+    <button mat-raised-button (click)="goToSearch()">Back</button>
   </div>
 
   <!-- <pre>{{ movie | json }}</pre> -->
@@ -75,8 +86,8 @@
 
 
 
-  <!--Scroll to top-->
-  <!--
+<!--Scroll to top-->
+<!--
   <button [ngClass]="{'show-scroll': navIsFixed}" (click)="scrollToTop()" class="scroll-to-top">
       Scroll To Top
   </button>

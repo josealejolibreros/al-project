@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 8px 16px;
+    //padding: 8px 16px;
   }
   app-navbar .docs-navbar, app-navbar .docs-navbar-header {
     background: #e91e63;
@@ -20,6 +20,11 @@
   }
   
   .mat-elevation-z6 {
+
+    overflow: hidden;
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    position: fixed; 
     background: #0b228a;
     box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
   }
@@ -58,3 +63,25 @@
     width: 100%;
   }
   
+.app-background{
+  background: #303030;
+  max-width: 80%;
+  
+  
+}
+
+.main {
+  
+  padding-bottom: 5cm;
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+
+
+.mat-m{
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0; 
+  left: 0;
+
+}

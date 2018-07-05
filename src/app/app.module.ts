@@ -6,11 +6,14 @@ import { FormsModule,ReactiveFormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 // Material & flex imports
 import {FlexLayoutModule} from '@angular/flex-layout';
 
 import {MatButtonModule,MatCardModule,MatAutocompleteModule,MatFormFieldModule,MatInputModule } from '@angular/material';
-
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 // Our components imports
 import { AppRoutingModule } from './app-routing.module';
@@ -53,6 +56,7 @@ import { ImageScrollComponent } from './components/image-scroll/image-scroll.com
     ImageScrollComponent
   ],
   imports: [
+    NgbModule.forRoot(),
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
@@ -60,7 +64,7 @@ import { ImageScrollComponent } from './components/image-scroll/image-scroll.com
     HttpClientModule,
     FlexLayoutModule,
     MatButtonModule,
-    MatCardModule,BrowserModule, 
+    MatCardModule,BrowserModule, MatToolbarModule,
     HttpModule,
     ReactiveFormsModule,
     MatAutocompleteModule,

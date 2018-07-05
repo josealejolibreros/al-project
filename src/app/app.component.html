@@ -1,19 +1,49 @@
 <!--<router-outlet></router-outlet>-->
 
 
-<nav class="mat-elevation-z6" fxLayout="row" >
-  <nav _ngcontent-c1 class="docs-navbar-header" >
-    <a mat-button routerLink="/movies" routerLinkActive="active" color="primary">Top movies</a><br>
-    <a mat-button routerLink="/search" routerLinkActive="active" color="primary">Search movies</a><br>
-    <a mat-button routerLink="/search-actors" routerLinkActive="active" color="primary">Search actors</a><br>
-  </nav>
-</nav>
+
 <!--app-navbar class = "mat-elevation-z6" _nghost-c1>
   <a mat-raised-button routerLink="/movies" routerLinkActive="active" color="primary">Movies</a><br>
 </app-navbar-->
 
 
-<router-outlet></router-outlet>
+<mat-toolbar class="mat-m" >
+    <nav _ngcontent-c1 class="docs-navbar-header" >
+        <a mat-button routerLink="/movies" routerLinkActive="active" color="primary">
+          Top movies</a><br>
+        <a mat-button routerLink="/search" routerLinkActive="active" color="primary">Search movies</a><br>
+        <a mat-button routerLink="/search-actors" routerLinkActive="active" color="primary">Search actors</a><br>
+      </nav>
+
+
+
+</mat-toolbar>
+
+
+
+      
+<div  class="main" fxLayout="row" fxLayoutAlign="center start" >
+  <div></div>
+
+  <div class="app-background"><router-outlet></router-outlet></div>
+
+  <div></div>
+
+</div>
+
+
+<!--
+<div  style="z-index: 2; padding-top: 75px; padding-left: 15%; padding-right: 15%">
+    <router-outlet></router-outlet>
+  </div>
+
+-->
+
+
+
+
+
+
 
 <!--
 <div fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="10px">

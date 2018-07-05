@@ -1,7 +1,13 @@
 .app-list-actors {
     padding: 1em;
     margin: 1em;
-    td, th {
+    td{
+        border: 1px lightgray solid;
+        padding: 0.5em;
+        height: 200px;
+        width: 150px;
+    }
+    th {
         border: 1px lightgray solid;
         padding: 0.5em;
     }
@@ -15,6 +21,15 @@
         background-color: rgba($color: #ffff00, $alpha: 0.1);
         cursor: pointer;
     }
+
+    .stats {
+        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+        //color: black;
+        background: #303030;
+        //background: #424242;
+    }
+
+    
 }
 
 .card-photo-actors {
