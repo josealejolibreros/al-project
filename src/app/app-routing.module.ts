@@ -9,6 +9,8 @@ import { TestTmdbMoviesComponent } from './components/test-tmdb-movies/test-tmdb
 import { TestTmdbCreditsComponent } from './components/test-tmdb-credits/test-tmdb-credits.component';
 import { PageListsActorsComponent } from './components/page-lists-actors/page-lists-actors.component';
 import { PageActorDetailComponent } from './components/page-actor-detail/page-actor-detail.component';
+import { AboutComponent } from './components/about/about.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {
@@ -34,7 +36,16 @@ const routes: Routes = [
   {
     path: 'actor/:id',
     component: PageActorDetailComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
+  },
+  {
+    path: '',
+    component: HomeComponent
   }
+
 ];
 
 @NgModule({
