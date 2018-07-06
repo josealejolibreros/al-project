@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GenresComponent } from './genres.component';
 
-describe('GenresComponent', () => {
+fdescribe('GenresComponent', () => {
   let component: GenresComponent;
   let fixture: ComponentFixture<GenresComponent>;
 
@@ -22,4 +22,18 @@ describe('GenresComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
+
+  fdescribe('toShow() method component', () => {
+    it('should execute a show genres', () => {
+       expect(component.toShow()).toBeDefined;
+    });
+
+  });
+
+  
+
+
+
 });
