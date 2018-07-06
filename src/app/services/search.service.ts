@@ -14,6 +14,8 @@ export class SearchService {
 
   constructor(private http: HttpClient) {  }
 
+  /*Search all of the possible movies according with a given string 'term'.
+  Each one of the results are implied with ResponseDescriptor object */
   search(term: string) {
     
     return this.http

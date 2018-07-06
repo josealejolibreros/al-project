@@ -1,13 +1,6 @@
 <div class="app-search">
-  <!--
-  <label for="">
-    Movies
-  </label>
-  <input type="text" [(ngModel)]="term">
-  <button mat-raised-button (click)="searchActors()">Search</button>
--->
 
-
+  
 <form class="example-form">
     <mat-form-field class="example-full-width">
       <input (keydown)="onKeydown($event)" [ngModel]="mymodel" (ngModelChange)="valuechange($event)" name="name" type="text" placeholder="Search an actor" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">

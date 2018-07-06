@@ -5,15 +5,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule,ReactiveFormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
-
-
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 // Material & flex imports
 import {FlexLayoutModule} from '@angular/flex-layout';
-
 import {MatButtonModule,MatCardModule,MatAutocompleteModule,MatFormFieldModule,MatInputModule } from '@angular/material';
 import {MatToolbarModule} from '@angular/material/toolbar';
+
+
 
 // Our components imports
 import { AppRoutingModule } from './app-routing.module';
@@ -24,15 +23,13 @@ import { PageActorDetailComponent } from './components/page-actor-detail/page-ac
 import { SearchComponent } from './components/search/search.component';
 import { ListComponent } from './components/list/list.component';
 import { StatsComponent } from './components/stats/stats.component';
-
 import { GenresComponent } from './components/genres/genres.component';
-import {TestTmdbMoviesComponent} from './components/test-tmdb-movies/test-tmdb-movies.component';
-import {TestTmdbCreditsComponent} from './components/test-tmdb-credits/test-tmdb-credits.component';
-import {PageListsActorsComponent} from './components/page-lists-actors/page-lists-actors.component';
+import { TestTmdbMoviesComponent } from './components/test-tmdb-movies/test-tmdb-movies.component';
+import { TestTmdbCreditsComponent } from './components/test-tmdb-credits/test-tmdb-credits.component';
+import { PageListsActorsComponent } from './components/page-lists-actors/page-lists-actors.component';
 import { ListActorsComponent } from './components/list-actors/list-actors.component';
 import { SearchActorsComponent } from './components/search-actors/search-actors.component';
 import { StatsActorsComponent } from './components/stats-actors/stats-actors.component';
-
 import { ImageScrollComponent } from './components/image-scroll/image-scroll.component';
 import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
@@ -47,18 +44,15 @@ import { HomeComponent } from './components/home/home.component';
     ListComponent,
     StatsComponent,
     GenresComponent,
-    TestTmdbMoviesComponent,TestTmdbCreditsComponent,
-    
+    TestTmdbMoviesComponent,
+    TestTmdbCreditsComponent,    
     PageListsActorsComponent,
     PageActorDetailComponent,
     ListActorsComponent,
     SearchActorsComponent,
-    StatsActorsComponent,
-    
-    ImageScrollComponent,
-    
-    AboutComponent,
-    
+    StatsActorsComponent,    
+    ImageScrollComponent,    
+    AboutComponent,    
     HomeComponent
   ],
   imports: [
@@ -70,15 +64,25 @@ import { HomeComponent } from './components/home/home.component';
     HttpClientModule,
     FlexLayoutModule,
     MatButtonModule,
-    MatCardModule,BrowserModule, MatToolbarModule,
+    MatCardModule,BrowserModule, 
+    MatToolbarModule,
     HttpModule,
     ReactiveFormsModule,
     MatAutocompleteModule,
     MatFormFieldModule,
-    MatInputModule 
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [PageListsComponent, PageDetailComponent, SearchComponent, ListComponent, StatsComponent, GenresComponent,TestTmdbCreditsComponent,TestTmdbMoviesComponent,PageListsActorsComponent]
+  exports: [
+    PageListsComponent, 
+    PageDetailComponent, 
+    SearchComponent, 
+    ListComponent, 
+    StatsComponent, 
+    GenresComponent,
+    TestTmdbCreditsComponent,
+    TestTmdbMoviesComponent,
+    PageListsActorsComponent]
 })
 export class AppModule { }

@@ -39,7 +39,7 @@
 
       <div>
         <div *ngIf="actor.adult === true">Adult: yes</div>
-        <div *ngIf="actor.adult === no">Adult: no</div>
+        <div *ngIf="actor.adult === false">Adult: no</div>
       </div>
       <div>
         <div class="title">Homepage</div>
@@ -52,6 +52,5 @@
     <button mat-raised-button (click) = "goToSearch()">Back</button>
   </div>
 
-  <!-- <pre>{{ movie | json }}</pre> -->
-
+  
 </div>

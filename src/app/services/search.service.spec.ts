@@ -1,3 +1,52 @@
+import { TestBed, getTestBed, inject } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+
+
+import { SearchService } from './search.service';
+
+
+describe('SearchService', () => {
+  let injector;
+  let service: SearchService;
+  let httpMock: HttpTestingController;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [SearchService]
+    });
+
+    injector = getTestBed();
+    service = injector.get(SearchService);
+    httpMock = injector.get(HttpTestingController);
+  });
+  
+  fdescribe('search() method service', () => {
+    it('should return an HttpClient', () => {
+      const url: string = "https://api.themoviedb.org/3/search/movie?api_key=977cda5d9bfac0a6b0252ef0272785b6&query=";
+      const term:string = "Hard die";
+      
+      
+
+      service.search(url + term).subscribe(data => {
+        expect(data).not.toBeNull;
+      });
+
+      
+    });
+
+  });
+
+
+
+});
+
+
+
+
+
+
+
 
 /*
 import { TestBed, inject } from '@angular/core/testing';
@@ -58,3 +107,5 @@ describe("WHEN the onFilter() is called",()=>{
 
 
 */
+
+

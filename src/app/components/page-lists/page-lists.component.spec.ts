@@ -1,4 +1,4 @@
-/*
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PageListsComponent } from './page-lists.component';
@@ -24,4 +24,3 @@ describe('PageListsComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-*/

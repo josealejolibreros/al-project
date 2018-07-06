@@ -1,4 +1,4 @@
-/*
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StatsActorsComponent } from './stats-actors.component';
@@ -24,4 +24,3 @@ describe('StatsActorsComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-*/

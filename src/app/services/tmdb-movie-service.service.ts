@@ -13,6 +13,7 @@ export class TmdbMovieServiceService {
 
   constructor(private  http: Http) { }
 
+  /*Get all top-rated movies on the webpage*/
   getMovies(){
     console.log("a");
     return this.http
